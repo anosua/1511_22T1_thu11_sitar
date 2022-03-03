@@ -1,0 +1,18 @@
+// C arithmetic examples
+// Anosua Roy (z5264396)
+// 2022-Feb-22
+
+#include <stdio.h>
+
+int main(void) {
+    printf("1 + 2 = %d\n", 1 + 2);
+    
+    printf("1 / 2 * 500 = %d\n", 1 / 2 * 500);
+    printf("1 / 2.0 * 500 = %lf\n", 1 / 2.0 * 500);
+    printf("(17 / 5) * 5 + (17 remainder 5) = %d\n", (17 / 5) * 5 + (17 % 5));
+    printf("(12 - 17) remainder 6 - 4 = %d\n", (12 - 17) % 6 - 4);
+    printf("'A' + 5 = %c\n", 'A' + 5);
+    printf("'A' + 32 = %c\n", 'A' + 32);
+    
+    return 0;
+}
