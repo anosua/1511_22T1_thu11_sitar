@@ -4,36 +4,24 @@
 
 #include <stdio.h>
 
-struct birthday {
-    int year;
-    int month;
-    int day;
-};
-
-void calc_days(struct birthday birth1, struct birthday birth2);
+void calc_days(int year1, int year2, int month1, int month2, int day1, int day2);
 
 int main(void) {
     
-    struct birthday corey;
-    corey.year = 2003;
-    corey.month = 3;
-    corey.day = 18;
+    calc_days(2003, 2004, 12, 4, 28, 26);
+    calc_days(2005, 2004, 12, 6, 28, 26);
+    calc_days(2003, 2004, 12, 4, 28, 26);
     
-    struct birthday jun;
-    jun.year = 2003;
-    jun.month = 6;
-    jun.day = 27;
-    
-    calc_days(corey, jun);
-    clac_days()
-
     return 0;
 }
 
-// prints out the difference between birthdays in days.
-void calc_days(struct birthday birth1, struct birthday birth2) {
-    printf("Difference: %d days.\n", 
-           (birth1.day - birth2.day) + 
-           ((birth1.month + birth2.month) * 31) + 
-           ((birth1.year - birth2.year) * 365));
+// prints out the diff between two birthdays in days.
+void calc_days(int year1, int year2, int month1, int month2, int day1, int day2) {
+
+    printf("diff in days: %d\n", 
+            (year1 - year2) * 365 + 
+            (month1 - month2) * 30 + 
+            (day1 - day2)
+    );
+    
 }
